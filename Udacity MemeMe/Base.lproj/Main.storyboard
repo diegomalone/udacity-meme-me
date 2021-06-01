@@ -16,12 +16,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hez-6Y-y9v" userLabel="Selected Image View">
-                                <rect key="frame" x="16" y="253" width="382" height="400"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="hez-6Y-y9v" secondAttribute="height" multiplier="191:200" id="ttl-Ir-RM8"/>
-                                </constraints>
-                            </imageView>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cgn-lb-KBv">
                                 <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                                 <items>
@@ -40,17 +34,20 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Aq8-dX-uj3"/>
                                 </items>
                             </toolbar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hez-6Y-y9v" userLabel="Selected Image View">
+                                <rect key="frame" x="16" y="60" width="382" height="737"/>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hez-6Y-y9v" secondAttribute="trailing" constant="16" id="1zy-zc-Jc6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hez-6Y-y9v" secondAttribute="bottom" constant="65" id="44p-fJ-LUq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cgn-lb-KBv" secondAttribute="bottom" id="S7e-x3-Wtr"/>
                             <constraint firstItem="cgn-lb-KBv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Uhi-4r-x23"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cgn-lb-KBv" secondAttribute="trailing" id="WzE-CF-ytA"/>
                             <constraint firstItem="hez-6Y-y9v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="pck-sk-t7m"/>
-                            <constraint firstItem="hez-6Y-y9v" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="ujg-hp-cid"/>
-                            <constraint firstItem="hez-6Y-y9v" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="vO4-Vv-vJ5"/>
+                            <constraint firstItem="hez-6Y-y9v" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="rkR-Xr-6i5"/>
                         </constraints>
                     </view>
                     <connections>
