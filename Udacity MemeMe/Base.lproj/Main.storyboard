@@ -47,12 +47,21 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLG-tq-VJ4" userLabel="Share Button">
+                                <rect key="frame" x="16" y="60" width="40" height="30"/>
+                                <state key="normal" title="Share"/>
+                                <connections>
+                                    <action selector="save:" destination="BYZ-38-t0r" eventType="touchUpInside" id="T4s-mS-fWn"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="fLG-tq-VJ4" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="0iz-9h-EkD"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hez-6Y-y9v" secondAttribute="trailing" constant="16" id="1zy-zc-Jc6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hez-6Y-y9v" secondAttribute="bottom" constant="65" id="44p-fJ-LUq"/>
+                            <constraint firstItem="fLG-tq-VJ4" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="5cv-Y0-kOm"/>
                             <constraint firstItem="Ht2-IV-OlW" firstAttribute="trailing" secondItem="hez-6Y-y9v" secondAttribute="trailing" constant="-8" id="M7y-ph-Mdm"/>
                             <constraint firstItem="4Vt-T6-eBa" firstAttribute="leading" secondItem="hez-6Y-y9v" secondAttribute="leading" constant="8" id="Q8T-ae-c6Y"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cgn-lb-KBv" secondAttribute="bottom" id="S7e-x3-Wtr"/>
@@ -70,6 +79,8 @@
                         <outlet property="bottomTextField" destination="Ht2-IV-OlW" id="H91-og-q3Z"/>
                         <outlet property="cameraButton" destination="ctL-Xc-zb8" id="4fH-CD-Gxe"/>
                         <outlet property="imagePickerView" destination="hez-6Y-y9v" id="jDT-9v-cHs"/>
+                        <outlet property="shareButton" destination="fLG-tq-VJ4" id="SmD-ir-fhy"/>
+                        <outlet property="toolbar" destination="cgn-lb-KBv" id="GKN-Uj-IcK"/>
                         <outlet property="topTextField" destination="4Vt-T6-eBa" id="wfC-V0-TPB"/>
                     </connections>
                 </viewController>

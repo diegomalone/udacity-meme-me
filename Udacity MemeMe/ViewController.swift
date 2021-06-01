@@ -13,6 +13,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     @IBOutlet weak var topTextField: UITextField!
     @IBOutlet weak var bottomTextField: UITextField!
+    @IBOutlet weak var shareButton: UIButton!
+    @IBOutlet weak var toolbar: UIToolbar!
     
     var activeTextField: UITextField?
     
@@ -121,6 +123,42 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let userInfo = notification.userInfo
         let keyboard = userInfo![UIResponder.keyboardFrameEndUserInfoKey] as! NSValue // of CGRect
         return keyboard.cgRectValue
+    }
+    
+    func generateMemedImage() -> UIImage {
+        
+        hideUiElements()
+        
+        UIGraphicsBeginImageContext(self.view.frame.size)
+        view.drawHierarchy(in: self.view.frame, afterScreenUpdates: true)
+        let memedImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        
+        showUiElements()
+        
+        return memedImage
+    }
+    
+    @IBAction func save(_ sender: Any) {
+        let meme = Meme(topText: topTextField.text!,
+                        bottomText: bottomTextField.text!,
+                        originalImage: imagePickerView.image!,
+                        memeImage: generateMemedImage())
+        
+        let activityViewController = UIActivityViewController(activityItems: [meme.memeImage], applicationActivities: nil)
+        activityViewController.popoverPresentationController?.sourceView = view
+        
+        present(activityViewController, animated: true, completion: nil)
+    }
+    
+    func hideUiElements() {
+        shareButton.isHidden = true
+        toolbar.isHidden = true
+    }
+    
+    func showUiElements() {
+            shareButton.isHidden = false
+            toolbar.isHidden = false
     }
 }
 
