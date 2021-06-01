@@ -16,6 +16,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hez-6Y-y9v" userLabel="Selected Image View">
+                                <rect key="frame" x="16" y="60" width="382" height="737"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Vt-T6-eBa" userLabel="Top Text Field">
+                                <rect key="frame" x="16" y="76" width="382" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cgn-lb-KBv">
                                 <rect key="frame" x="0.0" y="813" width="414" height="49"/>
                                 <items>
@@ -34,25 +42,35 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Aq8-dX-uj3"/>
                                 </items>
                             </toolbar>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hez-6Y-y9v" userLabel="Selected Image View">
-                                <rect key="frame" x="16" y="60" width="382" height="737"/>
-                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ht2-IV-OlW" userLabel="Bottom Text Field">
+                                <rect key="frame" x="16" y="758" width="382" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4Vt-T6-eBa" secondAttribute="trailing" constant="16" id="12S-ix-Ofw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hez-6Y-y9v" secondAttribute="trailing" constant="16" id="1zy-zc-Jc6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hez-6Y-y9v" secondAttribute="bottom" constant="65" id="44p-fJ-LUq"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ht2-IV-OlW" secondAttribute="trailing" constant="16" id="6Gq-dh-TLq"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cgn-lb-KBv" secondAttribute="bottom" id="S7e-x3-Wtr"/>
                             <constraint firstItem="cgn-lb-KBv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Uhi-4r-x23"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cgn-lb-KBv" secondAttribute="trailing" id="WzE-CF-ytA"/>
+                            <constraint firstItem="Ht2-IV-OlW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ek4-gu-d9H"/>
+                            <constraint firstItem="4Vt-T6-eBa" firstAttribute="top" secondItem="hez-6Y-y9v" secondAttribute="top" constant="16" id="hv4-BT-T66"/>
                             <constraint firstItem="hez-6Y-y9v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="pck-sk-t7m"/>
+                            <constraint firstItem="4Vt-T6-eBa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="q27-QT-D3Z"/>
+                            <constraint firstItem="Ht2-IV-OlW" firstAttribute="bottom" secondItem="hez-6Y-y9v" secondAttribute="bottom" constant="-16" id="rQQ-Zf-x6X"/>
                             <constraint firstItem="hez-6Y-y9v" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="rkR-Xr-6i5"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="bottomTextField" destination="Ht2-IV-OlW" id="H91-og-q3Z"/>
                         <outlet property="cameraButton" destination="ctL-Xc-zb8" id="4fH-CD-Gxe"/>
                         <outlet property="imagePickerView" destination="hez-6Y-y9v" id="jDT-9v-cHs"/>
+                        <outlet property="topTextField" destination="4Vt-T6-eBa" id="wfC-V0-TPB"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
