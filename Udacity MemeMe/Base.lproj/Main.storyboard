@@ -20,7 +20,7 @@
                                 <rect key="frame" x="16" y="60" width="382" height="737"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Vt-T6-eBa" userLabel="Top Text Field">
-                                <rect key="frame" x="16" y="76" width="382" height="23"/>
+                                <rect key="frame" x="24" y="76" width="366" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
@@ -43,7 +43,7 @@
                                 </items>
                             </toolbar>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ht2-IV-OlW" userLabel="Bottom Text Field">
-                                <rect key="frame" x="16" y="758" width="382" height="23"/>
+                                <rect key="frame" x="24" y="758" width="366" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
@@ -51,19 +51,19 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4Vt-T6-eBa" secondAttribute="trailing" constant="16" id="12S-ix-Ofw"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="hez-6Y-y9v" secondAttribute="trailing" constant="16" id="1zy-zc-Jc6"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="hez-6Y-y9v" secondAttribute="bottom" constant="65" id="44p-fJ-LUq"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Ht2-IV-OlW" secondAttribute="trailing" constant="16" id="6Gq-dh-TLq"/>
+                            <constraint firstItem="Ht2-IV-OlW" firstAttribute="trailing" secondItem="hez-6Y-y9v" secondAttribute="trailing" constant="-8" id="M7y-ph-Mdm"/>
+                            <constraint firstItem="4Vt-T6-eBa" firstAttribute="leading" secondItem="hez-6Y-y9v" secondAttribute="leading" constant="8" id="Q8T-ae-c6Y"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cgn-lb-KBv" secondAttribute="bottom" id="S7e-x3-Wtr"/>
+                            <constraint firstItem="Ht2-IV-OlW" firstAttribute="leading" secondItem="hez-6Y-y9v" secondAttribute="leading" constant="8" id="SxB-zt-dh7"/>
                             <constraint firstItem="cgn-lb-KBv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Uhi-4r-x23"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cgn-lb-KBv" secondAttribute="trailing" id="WzE-CF-ytA"/>
-                            <constraint firstItem="Ht2-IV-OlW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="ek4-gu-d9H"/>
                             <constraint firstItem="4Vt-T6-eBa" firstAttribute="top" secondItem="hez-6Y-y9v" secondAttribute="top" constant="16" id="hv4-BT-T66"/>
                             <constraint firstItem="hez-6Y-y9v" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="pck-sk-t7m"/>
-                            <constraint firstItem="4Vt-T6-eBa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="q27-QT-D3Z"/>
                             <constraint firstItem="Ht2-IV-OlW" firstAttribute="bottom" secondItem="hez-6Y-y9v" secondAttribute="bottom" constant="-16" id="rQQ-Zf-x6X"/>
                             <constraint firstItem="hez-6Y-y9v" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="16" id="rkR-Xr-6i5"/>
+                            <constraint firstItem="4Vt-T6-eBa" firstAttribute="trailing" secondItem="hez-6Y-y9v" secondAttribute="trailing" constant="-8" id="vCh-2C-L3E"/>
                         </constraints>
                     </view>
                     <connections>
