@@ -13,8 +13,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     @IBOutlet weak var topTextField: UITextField!
     @IBOutlet weak var bottomTextField: UITextField!
-    @IBOutlet weak var shareButton: UIButton!
     @IBOutlet weak var toolbar: UIToolbar!
+    @IBOutlet weak var navigationBar: UINavigationBar!
+    @IBOutlet weak var shareButton: UIBarButtonItem!
+    @IBOutlet weak var cancelButton: UIBarButtonItem!
     
     var activeTextField: UITextField?
     
@@ -27,14 +29,22 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
         cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
+        
         subscribeToKeyboardNotifications()
+    }
+    
+    @IBAction func resetState() {
+        configureTextField(textField: topTextField, defaultText: "TOP TEXT")
+        configureTextField(textField: bottomTextField, defaultText: "BOTTOM TEXT")
+        shareButton.isEnabled = false
+        imagePickerView.image = nil
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureTextField(textField: topTextField, defaultText: "TOP TEXT")
-        configureTextField(textField: bottomTextField, defaultText: "BOTTOM TEXT")
+        resetState()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -66,6 +76,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             imagePickerView.image = image
+            shareButton.isEnabled = true
         }
         
         dismiss(animated: true, completion: nil)
@@ -152,13 +163,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     func hideUiElements() {
-        shareButton.isHidden = true
+        navigationBar.isHidden = true
         toolbar.isHidden = true
     }
     
     func showUiElements() {
-            shareButton.isHidden = false
-            toolbar.isHidden = false
+        navigationBar.isHidden = false
+        toolbar.isHidden = false
     }
 }
 

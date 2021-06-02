@@ -57,7 +57,11 @@
                                                 <action selector="save:" destination="BYZ-38-t0r" id="wfo-ad-pif"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="nwt-XR-FBO"/>
+                                        <barButtonItem key="rightBarButtonItem" title="Cancel" id="nwt-XR-FBO">
+                                            <connections>
+                                                <action selector="resetState" destination="BYZ-38-t0r" id="p5t-yJ-Hyk"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -95,7 +99,10 @@
                     <connections>
                         <outlet property="bottomTextField" destination="Ht2-IV-OlW" id="H91-og-q3Z"/>
                         <outlet property="cameraButton" destination="ctL-Xc-zb8" id="4fH-CD-Gxe"/>
+                        <outlet property="cancelButton" destination="nwt-XR-FBO" id="FYr-c5-chK"/>
                         <outlet property="imagePickerView" destination="hez-6Y-y9v" id="jDT-9v-cHs"/>
+                        <outlet property="navigationBar" destination="78M-hG-uMF" id="PUH-IB-YhQ"/>
+                        <outlet property="shareButton" destination="Uw9-To-awN" id="oPS-gl-oEH"/>
                         <outlet property="toolbar" destination="cgn-lb-KBv" id="GKN-Uj-IcK"/>
                         <outlet property="topTextField" destination="4Vt-T6-eBa" id="wfC-V0-TPB"/>
                     </connections>
