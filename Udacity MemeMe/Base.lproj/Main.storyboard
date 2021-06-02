@@ -54,7 +54,7 @@
                                     <navigationItem id="XJR-sI-pj0">
                                         <barButtonItem key="leftBarButtonItem" image="square.and.arrow.up" catalog="system" id="Uw9-To-awN">
                                             <connections>
-                                                <action selector="save:" destination="BYZ-38-t0r" id="wfo-ad-pif"/>
+                                                <action selector="shareMeme:" destination="BYZ-38-t0r" id="VwI-5r-Auj"/>
                                             </connections>
                                         </barButtonItem>
                                         <barButtonItem key="rightBarButtonItem" title="Cancel" id="nwt-XR-FBO">
