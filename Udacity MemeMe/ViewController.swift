@@ -98,12 +98,12 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     //MARK: Button actions
     
-    @IBAction func pickImageFromAlbum(_ sender: Any) {
-        showImagePicker(sourceType: .savedPhotosAlbum)
-    }
-    
-    @IBAction func pickImageFromCamera(_ sender: Any) {
-        showImagePicker(sourceType: .camera)
+    @IBAction func pickImage(_ sender: UIBarButtonItem) {
+        if sender.tag == 0 {
+            showImagePicker(sourceType: .savedPhotosAlbum)
+        } else {
+            showImagePicker(sourceType: .camera)
+        }
     }
     
     @IBAction func shareMeme(_ sender: Any) {

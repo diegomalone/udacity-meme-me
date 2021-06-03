@@ -34,13 +34,13 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Jht-pi-VrN"/>
                                     <barButtonItem title="Pick from Album" id="Oqx-gr-yog" userLabel="Album Button">
                                         <connections>
-                                            <action selector="pickImageFromAlbum:" destination="BYZ-38-t0r" id="ob8-Xm-wie"/>
+                                            <action selector="pickImage:" destination="BYZ-38-t0r" id="KWh-Xl-Ogy"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="7Qg-N1-eY2"/>
-                                    <barButtonItem title="Open Camera" id="ctL-Xc-zb8" userLabel="Camera Button">
+                                    <barButtonItem tag="1" title="Open Camera" id="ctL-Xc-zb8" userLabel="Camera Button">
                                         <connections>
-                                            <action selector="pickImageFromCamera:" destination="BYZ-38-t0r" id="CL4-sr-krM"/>
+                                            <action selector="pickImage:" destination="BYZ-38-t0r" id="70y-6U-gyG"/>
                                         </connections>
                                     </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Aq8-dX-uj3"/>
