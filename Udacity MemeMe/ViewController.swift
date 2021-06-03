@@ -58,6 +58,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         textField.text = defaultText
     }
     
+    private func showImagePicker(sourceType: UIImagePickerController.SourceType) {
+        let imagePicker = UIImagePickerController()
+        imagePicker.delegate = self
+        imagePicker.sourceType = sourceType
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
     func hideUiElements() {
         navigationBar.isHidden = true
         toolbar.isHidden = true
@@ -92,17 +99,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     //MARK: Button actions
     
     @IBAction func pickImageFromAlbum(_ sender: Any) {
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.sourceType = .savedPhotosAlbum
-        present(imagePicker, animated: true, completion: nil)
+        showImagePicker(sourceType: .savedPhotosAlbum)
     }
     
     @IBAction func pickImageFromCamera(_ sender: Any) {
-        let imagePicker = UIImagePickerController()
-        imagePicker.delegate = self
-        imagePicker.sourceType = .camera
-        present(imagePicker, animated: true, completion: nil)
+        showImagePicker(sourceType: .camera)
     }
     
     @IBAction func shareMeme(_ sender: Any) {
