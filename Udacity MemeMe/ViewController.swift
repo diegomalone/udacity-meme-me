@@ -90,10 +90,13 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     func save(memeImage: UIImage) {
-        let _ = Meme(topText: self.topTextField.text!,
+        let meme = Meme(topText: self.topTextField.text!,
                      bottomText: self.bottomTextField.text!,
                      originalImage: self.imagePickerView.image!,
                      memeImage: memeImage)
+        
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.memes.append(meme)
     }
     
     //MARK: Button actions
