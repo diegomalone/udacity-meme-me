@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  CreateMemeViewController.swift
 //  Udacity MemeMe
 //
 //  Created by Diego Malone on 01/06/21.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
+class CreateMemeViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     
     //MARK: Outlets
     @IBOutlet weak var imagePickerView: UIImageView!
