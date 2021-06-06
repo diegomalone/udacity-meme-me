@@ -41,7 +41,7 @@ class CreateMemeViewController: UIViewController, UIImagePickerControllerDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        resetState()
+        setInitialState()
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -99,6 +99,13 @@ class CreateMemeViewController: UIViewController, UIImagePickerControllerDelegat
         appDelegate.memes.append(meme)
     }
     
+    func setInitialState() {
+        configureTextField(textField: topTextField, defaultText: "TOP TEXT")
+        configureTextField(textField: bottomTextField, defaultText: "BOTTOM TEXT")
+        shareButton.isEnabled = false
+        imagePickerView.image = nil
+    }
+    
     //MARK: Button actions
     
     @IBAction func pickImage(_ sender: UIBarButtonItem) {
@@ -119,15 +126,13 @@ class CreateMemeViewController: UIViewController, UIImagePickerControllerDelegat
         activityViewController.completionWithItemsHandler = { _, completed, _, _ in
             if completed {
                 self.save(memeImage: memeImage)
+                self.dismiss()
             }
         }
     }
     
-    @IBAction func resetState() {
-        configureTextField(textField: topTextField, defaultText: "TOP TEXT")
-        configureTextField(textField: bottomTextField, defaultText: "BOTTOM TEXT")
-        shareButton.isEnabled = false
-        imagePickerView.image = nil
+    @IBAction func dismiss() {
+        dismiss(animated: true, completion: nil)
     }
     
     //MARK: TextField delegate methods
