@@ -45,6 +45,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FF5A0F21266C858800A6F7BE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FFC46C622666DF730013BC76 /* Meme.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		FF5A0F22266C859300A6F7BE /* UI Elements */ = {
+			isa = PBXGroup;
+			children = (
+				FF5A0F1F266C836700A6F7BE /* SentMemeTableCellView.swift */,
+			);
+			path = "UI Elements";
+			sourceTree = "<group>";
+		};
 		FFC46C422666B5D90013BC76 = {
 			isa = PBXGroup;
 			children = (
@@ -71,10 +87,10 @@
 				FFC46C572666B5DE0013BC76 /* Assets.xcassets */,
 				FFC46C592666B5DE0013BC76 /* LaunchScreen.storyboard */,
 				FFC46C5C2666B5DE0013BC76 /* Info.plist */,
-				FFC46C622666DF730013BC76 /* Meme.swift */,
 				FF5A0F1B266C6E8200A6F7BE /* SentMemeTableViewController.swift */,
 				FF5A0F1D266C6E9400A6F7BE /* SentMemeCollectionViewController.swift */,
-				FF5A0F1F266C836700A6F7BE /* SentMemeTableCellView.swift */,
+				FF5A0F22266C859300A6F7BE /* UI Elements */,
+				FF5A0F21266C858800A6F7BE /* Model */,
 			);
 			path = "Udacity MemeMe";
 			sourceTree = "<group>";
