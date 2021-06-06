@@ -26,6 +26,10 @@ class SentMemeTableViewController: UIViewController, UITableViewDataSource, UITa
         self.navigationItem.rightBarButtonItem = item
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "sentMemeCell", for: indexPath) as! SentMemeTableCellView
         let meme = memes[(indexPath as NSIndexPath).row]
@@ -38,6 +42,13 @@ class SentMemeTableViewController: UIViewController, UITableViewDataSource, UITa
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return memes.count
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailController = self.storyboard!.instantiateViewController(identifier: "MemeDetailViewController") as! MemeDetailViewController
+        
+        detailController.meme = self.memes[(indexPath as NSIndexPath).row]
+        self.navigationController!.pushViewController(detailController, animated: true)
     }
     
     @objc func createMeme() {
