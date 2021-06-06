@@ -213,8 +213,48 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nwe-SV-drZ">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="sentMemeCell" id="md6-SL-mvn" customClass="SentMemeTableCellView" customModule="Udacity_MemeMe" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="128.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="md6-SL-mvn" id="DFf-Sz-fnK">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="128.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bPq-0h-foo">
+                                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128.5"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="128" id="MsB-zg-DL3"/>
+                                                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="128" id="RuQ-zt-FSa"/>
+                                                        <constraint firstAttribute="width" constant="128" id="ZW9-Mu-y6x"/>
+                                                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="128" id="wNy-YD-Mi7"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4H-dL-Gvf">
+                                                    <rect key="frame" x="136" y="54" width="258" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="bPq-0h-foo" firstAttribute="leading" secondItem="DFf-Sz-fnK" secondAttribute="leading" id="MMe-7D-jq8"/>
+                                                <constraint firstAttribute="trailing" secondItem="c4H-dL-Gvf" secondAttribute="trailing" constant="20" symbolic="YES" id="PC7-mt-Aoj"/>
+                                                <constraint firstItem="c4H-dL-Gvf" firstAttribute="centerY" secondItem="bPq-0h-foo" secondAttribute="centerY" id="Uji-b9-h4B"/>
+                                                <constraint firstAttribute="bottom" secondItem="bPq-0h-foo" secondAttribute="bottom" id="bRh-ts-MCJ"/>
+                                                <constraint firstItem="bPq-0h-foo" firstAttribute="top" secondItem="DFf-Sz-fnK" secondAttribute="top" id="jDn-O9-POV"/>
+                                                <constraint firstItem="c4H-dL-Gvf" firstAttribute="leading" secondItem="bPq-0h-foo" secondAttribute="trailing" constant="8" symbolic="YES" id="jYj-hz-iLV"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="memeImage" destination="bPq-0h-foo" id="Y1M-fg-e5V"/>
+                                            <outlet property="memeText" destination="c4H-dL-Gvf" id="CKi-34-5As"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="x7y-5n-ZmS" id="U4c-TQ-Cdz"/>
+                                    <outlet property="delegate" destination="x7y-5n-ZmS" id="x9A-Bp-9WY"/>
                                 </connections>
                             </tableView>
                         </subviews>
@@ -229,6 +269,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Sent Memes" id="qKg-5M-xvd"/>
                     <connections>
+                        <outlet property="tableView" destination="nwe-SV-drZ" id="rS5-Lq-ve1"/>
                         <segue destination="BYZ-38-t0r" kind="presentation" identifier="addMeme" id="U8o-u1-rbg"/>
                     </connections>
                 </viewController>
@@ -238,7 +279,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="uoW-xa-uPb"/>
+        <segue reference="U8o-u1-rbg"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="list.bullet" catalog="system" width="128" height="88"/>
