@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FF5A0F1C266C6E8200A6F7BE /* SentMemeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5A0F1B266C6E8200A6F7BE /* SentMemeTableViewController.swift */; };
+		FF5A0F1E266C6E9400A6F7BE /* SentMemeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF5A0F1D266C6E9400A6F7BE /* SentMemeCollectionViewController.swift */; };
 		FFC46C4F2666B5D90013BC76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC46C4E2666B5D90013BC76 /* AppDelegate.swift */; };
 		FFC46C512666B5D90013BC76 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC46C502666B5D90013BC76 /* SceneDelegate.swift */; };
 		FFC46C532666B5D90013BC76 /* CreateMemeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFC46C522666B5D90013BC76 /* CreateMemeViewController.swift */; };
@@ -17,6 +19,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FF5A0F1B266C6E8200A6F7BE /* SentMemeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentMemeTableViewController.swift; sourceTree = "<group>"; };
+		FF5A0F1D266C6E9400A6F7BE /* SentMemeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SentMemeCollectionViewController.swift; sourceTree = "<group>"; };
 		FFC46C4B2666B5D90013BC76 /* Udacity MemeMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Udacity MemeMe.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FFC46C4E2666B5D90013BC76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FFC46C502666B5D90013BC76 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +70,8 @@
 				FFC46C592666B5DE0013BC76 /* LaunchScreen.storyboard */,
 				FFC46C5C2666B5DE0013BC76 /* Info.plist */,
 				FFC46C622666DF730013BC76 /* Meme.swift */,
+				FF5A0F1B266C6E8200A6F7BE /* SentMemeTableViewController.swift */,
+				FF5A0F1D266C6E9400A6F7BE /* SentMemeCollectionViewController.swift */,
 			);
 			path = "Udacity MemeMe";
 			sourceTree = "<group>";
@@ -143,6 +149,8 @@
 				FFC46C532666B5D90013BC76 /* CreateMemeViewController.swift in Sources */,
 				FFC46C632666DF730013BC76 /* Meme.swift in Sources */,
 				FFC46C4F2666B5D90013BC76 /* AppDelegate.swift in Sources */,
+				FF5A0F1C266C6E8200A6F7BE /* SentMemeTableViewController.swift in Sources */,
+				FF5A0F1E266C6E9400A6F7BE /* SentMemeCollectionViewController.swift in Sources */,
 				FFC46C512666B5D90013BC76 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
