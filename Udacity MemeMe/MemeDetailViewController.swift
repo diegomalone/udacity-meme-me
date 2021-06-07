@@ -10,10 +10,13 @@ import UIKit
 
 class MemeDetailViewController: UIViewController {
     
-    var meme: Meme!
-    
+    //MARK: Outlets
     @IBOutlet weak var memeImage: UIImageView!
     
+    //MARK: Properties
+    var meme: Meme!
+    
+    //MARK: Lifecycle methods
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         

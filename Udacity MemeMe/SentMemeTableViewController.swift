@@ -10,12 +10,16 @@ import UIKit
 
 class SentMemeTableViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    //MARK: Outlets
+    @IBOutlet weak var tableView: UITableView!
+    
+    //MARK: Properties
     var memes: [Meme]! {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         return appDelegate.memes
     }
     
-    @IBOutlet weak var tableView: UITableView!
+    //MARK: Lifecycle methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +33,8 @@ class SentMemeTableViewController: UIViewController, UITableViewDataSource, UITa
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()
     }
+    
+    //MARK: TableView delegate methods
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "sentMemeCell", for: indexPath) as! SentMemeTableCellView
@@ -50,6 +56,8 @@ class SentMemeTableViewController: UIViewController, UITableViewDataSource, UITa
         detailController.meme = self.memes[(indexPath as NSIndexPath).row]
         self.navigationController!.pushViewController(detailController, animated: true)
     }
+    
+    //MARK: Button actions
     
     @objc func createMeme() {
         performSegue(withIdentifier: "addMeme", sender: self)

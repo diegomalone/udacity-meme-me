@@ -10,6 +10,7 @@ import UIKit
 
 class SentMemeTableCellView: UITableViewCell {
     
+    //MARK: Outlets
     @IBOutlet weak var memeImage: UIImageView!
     @IBOutlet weak var memeText: UILabel!
 }
